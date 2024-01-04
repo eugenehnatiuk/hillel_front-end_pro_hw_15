@@ -1,0 +1,147 @@
+@import 'fonts';
+@import 'reset';
+@import 'vars';
+
+body {
+  background: #45465e78;
+}
+
+.main {
+  &__title {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 55px;
+    font-weight: 700;
+    margin: 30px 0;
+
+    @include viewport-md {
+      font-size: 39px;
+    }
+  }
+
+  &__text {
+    text-align: center;
+    font-family: 'Montserrat';
+    font-size: 30px;
+    font-weight: 400;
+    margin: 0 0 40px 0;
+
+    @include viewport-md {
+      font-size: 20px;
+    }
+  }
+}
+
+.notepad {
+  // .notepad__outputField
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  // padding: 30px;
+
+  &__outputField {
+    position: relative;
+    flex: 1 0;
+    max-width: 600px;
+    min-height: 400px;
+    border: 1px black solid;
+    border-radius: 6px;
+    padding: 20px 50px 20px 20px;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 400;
+    text-align: justify;
+    
+  }
+
+  // .notepad__note
+
+  &__note {
+    margin-bottom: 20px;
+    word-wrap: break-word;
+  }
+
+  &__delete {
+    position: relative;
+    cursor: pointer;
+
+    &::after,
+    &::before {
+      position: absolute;
+      content: '';
+      top: 0;
+      right: -20px;
+      border-radius: 3px;
+      width: 12px;
+      height: 2px;
+      background: red;
+    }
+    &::after {
+      transform: rotate(45deg);
+    }
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  // .notepad__inputField
+
+  &__inputField {
+    flex: 1 0;
+    max-width: 300px;
+  }
+
+  &__inputText {
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 400;
+    width: 100%;
+    padding: 20px 10px 20px 10px;
+    background: none;
+    border: 1px solid black;
+    border-radius: 6px;
+    // min-height: 2lh;
+    max-height: 10lh;
+    resize: none;
+    margin-bottom: 30px;
+  }
+
+  &__button {
+    cursor: pointer;
+    font-family: 'Montserrat';
+    font-size: 12px;
+    font-weight: 700;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 6px;
+    background: green;
+    color: white;
+  }
+}
+
+.container {
+  padding: 0 30px;
+  // від 0 до бескінечності
+
+  @include viewport-md {
+    // від 768 >
+    max-width: 708px;
+    margin: 0 auto;
+  }
+
+  @include viewport-lg {
+    // від 1024 >
+    max-width: 964px;
+  }
+
+  @include viewport-xl {
+    // від 1440 >
+    max-width: 1380px;
+  }
+
+  @include viewport-xll {
+    max-width: 1760px;
+  }
+}

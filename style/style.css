@@ -1,0 +1,196 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Bold.woff") format("woff");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat-Regular.woff") format("woff");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+html, body {
+  scroll-behavior: smooth;
+}
+
+picture {
+  display: inline-block;
+}
+
+body {
+  background: rgba(69, 70, 94, 0.4705882353);
+}
+
+.main__title {
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 55px;
+  font-weight: 700;
+  margin: 30px 0;
+}
+@media screen and (max-width: 768px) {
+  .main__title {
+    font-size: 39px;
+  }
+}
+.main__text {
+  text-align: center;
+  font-family: "Montserrat";
+  font-size: 30px;
+  font-weight: 400;
+  margin: 0 0 40px 0;
+}
+@media screen and (max-width: 768px) {
+  .main__text {
+    font-size: 20px;
+  }
+}
+
+.notepad {
+  margin: 0 auto;
+  max-width: 1000px;
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+}
+.notepad__outputField {
+  position: relative;
+  flex: 1 0;
+  max-width: 600px;
+  min-height: 400px;
+  border: 1px black solid;
+  border-radius: 6px;
+  padding: 20px 50px 20px 20px;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 400;
+  text-align: justify;
+}
+.notepad__note {
+  margin-bottom: 20px;
+  word-wrap: break-word;
+}
+.notepad__delete {
+  position: relative;
+  cursor: pointer;
+}
+.notepad__delete::after, .notepad__delete::before {
+  position: absolute;
+  content: "";
+  top: 0;
+  right: -20px;
+  border-radius: 3px;
+  width: 12px;
+  height: 2px;
+  background: red;
+}
+.notepad__delete::after {
+  transform: rotate(45deg);
+}
+.notepad__delete::before {
+  transform: rotate(-45deg);
+}
+.notepad__inputField {
+  flex: 1 0;
+  max-width: 300px;
+}
+.notepad__inputText {
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 400;
+  width: 100%;
+  padding: 20px 10px 20px 10px;
+  background: none;
+  border: 1px solid black;
+  border-radius: 6px;
+  max-height: 10lh;
+  resize: none;
+  margin-bottom: 30px;
+}
+.notepad__button {
+  cursor: pointer;
+  font-family: "Montserrat";
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px;
+  border: 1px solid black;
+  border-radius: 6px;
+  background: green;
+  color: white;
+}
+
+.container {
+  padding: 0 30px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    max-width: 708px;
+    margin: 0 auto;
+  }
+}
+@media screen and (max-width: 1024px) {
+  .container {
+    max-width: 964px;
+  }
+}
+@media screen and (max-width: 1440px) {
+  .container {
+    max-width: 1380px;
+  }
+}
+@media screen and (max-width: 1920px) {
+  .container {
+    max-width: 1760px;
+  }
+}/*# sourceMappingURL=style.css.map */
