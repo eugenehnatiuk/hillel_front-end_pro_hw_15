@@ -12,7 +12,7 @@ function addText() {
     outputField.appendChild(deleteButton);
 
     // створюємо параграф з тексту який ввели
-    const noteParagraph = document.createElement('p');
+    const noteParagraph = document.createElement('pre');
     noteParagraph.classList.add('notepad__note');
     noteParagraph.innerHTML = inputText;
     outputField.appendChild(noteParagraph);
