@@ -53,14 +53,14 @@ body {
     font-size: 12px;
     font-weight: 400;
     text-align: justify;
-    
+    word-break: break-all;
   }
 
   // .notepad__note
 
   &__note {
     margin-bottom: 20px;
-    word-wrap: break-word;
+    white-space: pre-line;
   }
 
   &__delete {
