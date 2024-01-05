@@ -43,3 +43,4 @@ outputField.addEventListener('click', (event) => {
     deleteButton.remove();
   }
 });
+
